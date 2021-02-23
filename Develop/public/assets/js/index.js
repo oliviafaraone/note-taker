@@ -1,3 +1,6 @@
+const fs = require("fs");
+const path = require("path");
+
 let noteTitle;
 let noteText;
 let saveNoteBtn;
@@ -178,3 +181,11 @@ if (window.location.pathname === '/notes') {
 }
 
 getAndRenderNotes();
+
+module.exports = {
+  getNotes,
+  saveNote,
+  renderActiveNote,
+  handleNoteSave,
+  getAndRenderNotes
+}
